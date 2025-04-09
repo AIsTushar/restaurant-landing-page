@@ -57,7 +57,7 @@ function About() {
   };
 
   return (
-    <section className="bg-white px-56 py-24">
+    <section className="relative bg-white px-56 py-24">
       <div className="mx-auto flex gap-8">
         <div className="relative w-1/2">
           <div className="">
@@ -129,13 +129,13 @@ function About() {
         />
       </div>
 
-      <div className="absolute right-0 bottom-0">
+      <div className="absolute right-0 bottom-36">
         <Image
-          src="/Rectangle.png"
+          src="/side.png"
           alt="Rectangle"
           width={500}
           height={500}
-          className="h-96 w-96"
+          className="h-66 w-36"
         />
       </div>
     </section>

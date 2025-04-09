@@ -1,6 +1,7 @@
 import About from "@/components/About/About";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
+import Popular from "@/components/Popular/Popular";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
       </div>
       <About />
+      <Popular />
 
       <div className="min-h-screen"></div>
     </main>
