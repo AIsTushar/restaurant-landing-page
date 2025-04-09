@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Base Requirements -
 
-## Getting Started
+- Convert the Figma design using a React framework like Next.JS, Vue etc.
+- For styling you can do full custom or may use a framework like Bootstrap, Tailwind etc.
 
-First, run the development server:
+Project Requirements –
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Header section will be sticky.
+- About section should have a working tab with relevant content (you can use dummy text for now on other tabs).
+- Carousel should have autoplay and loop with duplicated items.
+- Testimonials section should be slider with slide effect.
+- Functional form will be a plus point.
+- Form section must functional.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Submission Guidelines
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Share the link of your public repository of your converted website while you submit the application form.
+- Within your project repository, must include a README.md file. In this file, you should add the live preview link and any other important information about your project. If you use any framework or library then you must mention that.
+- The assignment must be hosted on Netlify or Vercel which you must share with us as well.
