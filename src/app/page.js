@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <Popular />
       <BookNow />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Footer />
     </main>
   );

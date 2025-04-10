@@ -4,14 +4,14 @@ import { Play } from "lucide-react";
 
 function Testimonials() {
   return (
-    <div className="relative overflow-hidden bg-white px-56 py-28">
+    <div className="relative overflow-hidden bg-white px-7 py-7 lg:px-56 lg:py-28">
       {/* Absulte Images */}
       <Image
         src="/221.png"
         alt="image"
         width={200}
         height={200}
-        className="absolute top-32 left-0 h-62 w-32"
+        className="absolute top-32 left-0 hidden h-62 w-32 lg:block"
       />
 
       <Image
@@ -19,7 +19,7 @@ function Testimonials() {
         alt="image"
         width={200}
         height={200}
-        className="absolute -right-6 bottom-16 h-96 w-96 rotate-8"
+        className="absolute -right-6 bottom-16 hidden h-96 w-96 rotate-8 lg:block"
       />
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -28,20 +28,20 @@ function Testimonials() {
             <span className="mr-2 inline-block h-2 w-2 bg-red-800" />
             Crispy, Every Bite Taste
           </div>
-          <h2 className="text-4xl font-bold tracking-tight uppercase antialiased">
+          <h2 className="text-3xl font-bold tracking-tight uppercase antialiased lg:text-4xl">
             What Some of my Customers Say
           </h2>
         </div>
-        <Swiper />
+        <Swiper className="hidden lg:flex" />
       </div>
 
       {/* Testimonials */}
-      <div className="mt-16 flex h-[500px] w-full">
-        <div className="w-1/2 bg-yellow-400 px-16 py-16">
+      <div className="mt-6 flex w-full flex-col-reverse lg:mt-16 lg:h-[500px] lg:flex-row">
+        <div className="bg-yellow-400 px-7 py-16 lg:w-1/2 lg:px-16">
           <div className="mx-auto flex h-full flex-col justify-between">
             {/* Quote Text */}
             <div className="relative">
-              <p className="text-lg leading-relaxed text-black">
+              <p className="h-[300px] text-sm leading-relaxed text-black lg:text-lg">
                 <span className="absolute -top-2 -left-3 text-4xl">“</span>
                 You can&apos;t go wrong with Chicken Mandi, I had twice. The
                 chicken was cooked perfectly, juicy & soft (usually mandi
@@ -71,7 +71,7 @@ function Testimonials() {
           </div>
         </div>
         <div
-          className="relative h-full w-2/3 bg-cover bg-center"
+          className="relative h-[300px] bg-cover bg-center lg:h-full lg:w-2/3"
           style={{ backgroundImage: "url('/video.png')" }}
         >
           {/* Black overlay */}
