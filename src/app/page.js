@@ -9,7 +9,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 export default function Home() {
   return (
     <main>
-      <div className="sticky top-0 -z-10 bg-[url('/Rectangle.png'),linear-gradient(123.4deg,_#bd1f17_40.8%,_#a61d13_76.4%,_#8e1b0f_120.69%)] bg-cover bg-center bg-no-repeat">
+      <div className="sticky top-0 bg-[url('/Rectangle.png'),linear-gradient(123.4deg,_#bd1f17_40.8%,_#a61d13_76.4%,_#8e1b0f_120.69%)] bg-cover bg-center bg-no-repeat">
         <Header />
         <Hero />
       </div>

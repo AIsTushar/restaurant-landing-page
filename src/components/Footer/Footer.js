@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat px-7 py-7 text-center text-white sm:px-10 md:px-56 lg:py-28"
-      style={{ backgroundImage: "url('/Footer.jpg')" }}
+      style={{ backgroundImage: "url('/footer.jpg')" }}
     >
       {/* Black overlay */}
       <div className="absolute inset-0 z-0 bg-black/80" />
