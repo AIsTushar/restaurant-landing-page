@@ -4,7 +4,7 @@ import { Play } from "lucide-react";
 
 function Testimonials() {
   return (
-    <div className="relative bg-white px-56 py-28">
+    <div className="relative overflow-hidden bg-white px-56 py-28">
       {/* Absulte Images */}
       <Image
         src="/221.png"

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Links() {
   return (
-    <nav className="flex items-center justify-center gap-7 text-xs text-white">
+    <nav className="hidden items-center justify-center gap-7 text-xs text-white lg:flex">
       <Link href="#" className="">
         Home
       </Link>
