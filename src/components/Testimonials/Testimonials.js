@@ -87,7 +87,7 @@ function Testimonials() {
           <div className="absolute inset-0 z-0 bg-black/30" />
           <div className="absolute top-1/2 left-1/2 z-10 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full">
             <Image
-              src="/play.png"
+              src="/Play.png"
               alt="Play"
               width={20}
               height={20}
