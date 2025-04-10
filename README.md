@@ -1,3 +1,20 @@
+# Converted Website
+
+This is the converted version of the given design/website built using **Next.js**, **Tailwind CSS**, and **Framer Motion**.
+
+## 🔗 Live Preview
+
+👉 [Live Site](https://restaurant-landing-page-jet.vercel.app/)  
+👉 [Repository Link](https://github.com/AIsTushar/restaurant-landing-page)
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+---
+
 # Base Requirements -
 
 - Convert the Figma design using a React framework like Next.JS, Vue etc.
@@ -17,3 +34,7 @@ Submission Guidelines
 - Share the link of your public repository of your converted website while you submit the application form.
 - Within your project repository, must include a README.md file. In this file, you should add the live preview link and any other important information about your project. If you use any framework or library then you must mention that.
 - The assignment must be hosted on Netlify or Vercel which you must share with us as well.
+
+```
+
+```
