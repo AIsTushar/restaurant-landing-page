@@ -4,7 +4,7 @@ import Card from "./Card";
 function Footer() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat px-4 py-28 text-center text-white sm:px-10 md:px-56"
+      className="relative bg-cover bg-center bg-no-repeat px-7 py-7 text-center text-white sm:px-10 md:px-56 lg:py-28"
       style={{ backgroundImage: "url('/Footer.jpg')" }}
     >
       {/* Black overlay */}
@@ -12,7 +12,7 @@ function Footer() {
 
       {/* Actual content */}
       <div className="relative z-10">
-        <p className="text-4xl font-bold text-white">
+        <p className="text-3xl font-bold text-white lg:text-4xl">
           We ready to have you the best dining experiences
         </p>
 

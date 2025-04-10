@@ -23,10 +23,10 @@ function BookNow() {
   };
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat px-4 py-28 text-center text-white sm:px-10 md:px-56"
+      className="relative bg-cover bg-center bg-no-repeat px-7 py-7 text-center text-white lg:px-56 lg:py-28"
       style={{ backgroundImage: "url('/booknow.jpg')" }}
     >
-      <div className="w-1/2">
+      <div className="text-left lg:w-1/2">
         <div className="mb-4 flex items-center gap-2">
           <div className="h-2 w-2 bg-red-600"></div>
           <h3 className="text-lg font-semibold text-red-600">Book Now</h3>
@@ -122,7 +122,7 @@ function BookNow() {
           <div className="md:col-span-2">
             <button
               type="submit"
-              className="rounded-md bg-yellow-500 px-8 py-3 font-semibold text-black transition hover:bg-yellow-600"
+              className="bg-yellow-500 px-6 py-2.5 font-semibold text-black uppercase lg:block"
             >
               BOOK NOW
             </button>
