@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <div class="flex h-20 items-center justify-between px-7 lg:h-28 lg:px-56">
+    <div className="flex h-20 items-center justify-between px-7 lg:h-28 lg:px-56">
       <div className="flex items-center gap-12">
         <Logo />
         <Links />
