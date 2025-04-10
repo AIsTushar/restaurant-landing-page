@@ -58,7 +58,7 @@ function Footer() {
               <Facebook className="h-5 w-5" />
             </div>
           </div>
-          <p className="text-lg text-white">© 2023 All Rights Reserved</p>
+          <p className="text-lg text-white">© 2025 All Rights Reserved</p>
         </div>
       </div>
     </div>

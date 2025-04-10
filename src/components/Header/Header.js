@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Links from "./Links";
 import Logo from "./Logo";
+import MobileLinks from "./MobileLinks";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,12 @@ function Header() {
           className={`absolute h-0.5 w-6 rounded bg-white transition-all duration-300 ${isOpen ? "-rotate-45" : "translate-y-2"}`}
         />
       </button>
+
+      {isOpen ? (
+        <div className="fixed top-1/2 left-1/2 z-30 flex min-w-[70vw] -translate-x-[50%] -translate-y-[50%] items-center justify-center rounded-lg bg-black/75 py-16 backdrop-blur-md">
+          <MobileLinks />
+        </div>
+      ) : null}
     </div>
   );
 }
