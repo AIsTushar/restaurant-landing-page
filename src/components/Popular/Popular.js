@@ -12,18 +12,19 @@ function Popular() {
             <span className="mr-2 inline-block h-2 w-2 bg-red-800" />
             Crispy, Every Bite Taste
           </div>
-          <h2 className="text-4xl font-bold tracking-tight uppercase antialiased">
+          <h2 className="text-3xl font-bold tracking-tight uppercase antialiased lg:text-4xl">
             POPULAR FOOD ITEMS
           </h2>
         </div>
-        <Swiper />
+        <Swiper className="hidden lg:flex" />
       </div>
       {/* Cards */}
-      <div className="mt-16 grid gap-8 lg:grid-cols-4">
+      <div className="mt-16 grid gap-0 lg:grid-cols-4 lg:gap-8">
         <Card
           image="/burger.png"
           title="vegetables burger"
           subtitle="Barbecue Italian cuisine pizza"
+          className="w-full"
         />
         <Card
           image="/french-fries.png"
@@ -43,6 +44,10 @@ function Popular() {
           subtitle="Japanese Cuisine Chicken"
           className="hidden lg:block"
         />
+      </div>
+
+      <div className="my-7 flex w-full justify-center lg:hidden">
+        <Swiper />
       </div>
 
       <div className="hidden lg:block">
