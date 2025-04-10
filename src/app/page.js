@@ -14,8 +14,8 @@ export default function Home() {
         <Hero />
       </div>
       <About />
-      {/* <Popular />
-      <BookNow />
+      <Popular />
+      {/* <BookNow />
       <Testimonials />
       <Footer /> */}
     </main>

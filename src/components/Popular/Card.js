@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-function Card({ image, title, subtitle }) {
+function Card({ image, title, subtitle, className }) {
   return (
-    <div className="mx-auto max-w-xs overflow-hidden rounded-md bg-white px-4 py-4">
+    <div
+      className={`mx-auto max-w-xs overflow-hidden rounded-md bg-white px-4 py-4 ${className}`}
+    >
       {/* Image Section */}
       <div className="flex h-28 w-full items-center justify-center">
         <Image

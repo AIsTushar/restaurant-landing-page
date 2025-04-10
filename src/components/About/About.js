@@ -57,9 +57,10 @@ function About() {
   };
 
   return (
-    <section className="relative bg-white px-56 py-24">
-      <div className="mx-auto flex gap-8">
-        <div className="relative w-1/2">
+    <section className="relative bg-white px-7 py-7 lg:px-56 lg:py-24">
+      <div className="mx-auto flex flex-col gap-8 lg:flex-row">
+        <div className="relative lg:w-1/2">
+          {/* photo */}
           <div className="">
             <Image src="/about.png" alt="About" width={500} height={500} />
           </div>
@@ -69,13 +70,13 @@ function About() {
               alt="MarketPlace"
               width={500}
               height={500}
-              className="h-30 w-48"
+              className="h-20 w-32 lg:h-30 lg:w-48"
             />
           </div>
         </div>
 
         {/* Right Side: Text, Tabs, and Contact Info */}
-        <div className="flex w-1/2 flex-col gap-6">
+        <div className="flex flex-col gap-6 lg:w-1/2">
           {/* Tabs */}
           <div className="flex gap-4 border-b border-red-800">
             {["About", "Experience", "Contact"].map((tab) => (
@@ -106,7 +107,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mt-16 flex flex-col gap-26 md:flex-row">
+      <div className="mt-16 flex flex-col gap-6 md:flex-row lg:gap-26">
         {/* Feature 1: Fast Delivery */}
         <Feature
           icon={Package}
@@ -129,7 +130,7 @@ function About() {
         />
       </div>
 
-      <div className="absolute right-0 bottom-36">
+      <div className="absolute right-0 bottom-36 hidden lg:block">
         <Image
           src="/side.png"
           alt="Rectangle"
