@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Card from "./Card";
@@ -116,34 +115,35 @@ function Popular() {
 
   const visibleItems = getVisibleItems();
 
-  // Card wrapper component with animations
-  const AnimatedCardWrapper = ({ item, index }) => (
-    <motion.div
-      key={`card-${item.id}-${index}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          delay: index * 0.1,
-          duration: 0.5,
-          type: "spring",
-          stiffness: 100,
-        },
-      }}
-      exit={{ opacity: 0, y: -20 }}
-    >
-      <Card
-        image={item.image}
-        title={item.title}
-        subtitle={item.subtitle}
-        className="w-full"
-      />
-    </motion.div>
-  );
+  // Single carousel container animation
+  const carouselVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    }),
+  };
+
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  const paginate = (newDirection) => {
+    if (newDirection > 0) {
+      handleNext();
+    } else {
+      handlePrev();
+    }
+    setPage([page + newDirection, newDirection]);
+  };
 
   return (
-    <div className="relative bg-[#FBF7F2] px-7 py-7 lg:px-56 lg:py-28">
+    <div className="relative overflow-x-hidden bg-[#FBF7F2] px-7 py-7 lg:px-56 lg:py-28">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-2">
@@ -167,36 +167,55 @@ function Popular() {
         </div>
         <Swiper
           className="hidden lg:flex"
-          onPrev={handlePrev}
-          onNext={handleNext}
+          onPrev={() => paginate(-1)}
+          onNext={() => paginate(1)}
         />
       </div>
 
       {/* Cards - Desktop */}
-      <div className="mt-16 hidden lg:grid lg:grid-cols-4 lg:gap-8">
-        <AnimatePresence mode="wait">
-          {visibleItems.map((item, index) => (
-            <AnimatedCardWrapper
-              key={`desktop-${item.id}-${index}`}
-              item={item}
-              index={index}
-            />
-          ))}
+      <div className="relative mt-16 hidden h-72 lg:block">
+        <AnimatePresence initial={false} custom={direction} mode="wait">
+          <motion.div
+            key={page}
+            className="absolute inset-0 grid grid-cols-4 gap-8"
+            custom={direction}
+            variants={carouselVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+          >
+            {visibleItems.map((item, index) => (
+              <div key={`desktop-${item.id}-${index}`}>
+                <Card
+                  image={item.image}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  className="w-full"
+                />
+              </div>
+            ))}
+          </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Cards - Mobile */}
-      <div className="mt-16 lg:hidden">
-        <AnimatePresence mode="wait">
+      <div className="relative mt-16 h-72 lg:hidden">
+        <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
-            key={`mobile-${currentIndex}`}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
+            key={page}
+            className="absolute inset-0"
+            custom={direction}
+            variants={carouselVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
             transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
             }}
           >
             <Card
@@ -210,7 +229,7 @@ function Popular() {
       </div>
 
       <div className="my-7 flex w-full justify-center lg:hidden">
-        <Swiper onPrev={handlePrev} onNext={handleNext} />
+        <Swiper onPrev={() => paginate(-1)} onNext={() => paginate(1)} />
       </div>
 
       {/* Sliding dots indicator */}
@@ -225,6 +244,7 @@ function Popular() {
             }`}
             onClick={() => {
               setCurrentIndex(index);
+              setPage([page + 1, index > currentIndex ? 1 : -1]);
               resetTimer();
             }}
             whileHover={{ scale: 1.2 }}
