@@ -37,11 +37,20 @@ function Testimonials() {
 
       {/* Testimonials */}
       <div className="mt-6 flex w-full flex-col-reverse lg:mt-16 lg:h-[500px] lg:flex-row">
-        <div className="bg-yellow-400 px-7 py-16 lg:w-1/2 lg:px-16">
+        <div className="relative h-[400px] overflow-hidden bg-yellow-400 px-7 py-7 lg:h-auto lg:w-1/2 lg:px-16 lg:py-16">
+          <div className="absolute -bottom-5 -left-3 lg:bottom-12">
+            <Image
+              src="/Group.svg"
+              alt="vector"
+              width={200}
+              height={200}
+              className="h-18 w-16"
+            />
+          </div>
           <div className="mx-auto flex h-full flex-col justify-between">
             {/* Quote Text */}
             <div className="relative">
-              <p className="h-[300px] text-sm leading-relaxed text-black lg:text-lg">
+              <p className="text-lg leading-relaxed text-black lg:text-lg">
                 <span className="absolute -top-2 -left-3 text-4xl">“</span>
                 You can&apos;t go wrong with Chicken Mandi, I had twice. The
                 chicken was cooked perfectly, juicy & soft (usually mandi
@@ -86,6 +95,19 @@ function Testimonials() {
             />
           </div>
         </div>
+      </div>
+      <div className="mt-6 flex w-full items-center justify-center lg:hidden">
+        <Swiper />
+      </div>
+
+      <div>
+        <Image
+          src="/Group.svg"
+          alt="vector"
+          width={200}
+          height={200}
+          className="absolute right-0 -bottom-10 h-12 w-12"
+        />
       </div>
     </div>
   );
