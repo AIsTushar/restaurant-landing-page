@@ -1,4 +1,4 @@
-import { Facebook, Twitter } from "lucide-react";
+import { Clock, Facebook, Twitter } from "lucide-react";
 import Card from "./Card";
 
 function Footer() {
@@ -16,14 +16,34 @@ function Footer() {
           We ready to have you the best dining experiences
         </p>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="mt-12 flex flex-col items-center justify-between gap-8 lg:flex-row">
+          <Card
+            icon={Clock}
+            title="Opening Hours"
+            infoOne="Monday - Friday"
+            infoTwo="10:00 AM to 11:00 PM"
+          />
+          <Card
+            icon={Clock}
+            title="Lets Talk"
+            infoOne="Phone: 123-456-7890"
+            infoTwo="Fax: 123-456-7890"
+          />
+          <Card
+            icon={Clock}
+            title="Book a Table"
+            infoOne="Email: demo@website.com"
+            infoTwo="Support: support@website.com"
+          />
+          <Card
+            icon={Clock}
+            title="Our Address"
+            infoOne="123 Main St, City"
+            infoTwo="States of America"
+          />
         </div>
 
-        <div className="mt-26">
+        <div className="mt-12 lg:mt-26">
           <div className="mb-4 flex justify-center gap-4">
             <div className="rounded-full border-1 border-white p-3">
               <Facebook className="h-5 w-5" />
