@@ -29,15 +29,15 @@ function Header() {
         onClick={handleClick}
       >
         <span
-          className={`absolute h-0.5 w-6 rounded bg-black transition-all duration-300 dark:bg-white ${isOpen ? "rotate-45" : "-translate-y-2"}`}
+          className={`absolute h-0.5 w-6 rounded bg-white transition-all duration-300 ${isOpen ? "rotate-45" : "-translate-y-2"}`}
         />
 
         <span
-          className={`absolute h-0.5 w-6 rounded bg-black transition-all duration-300 dark:bg-white ${isOpen ? "opacity-0" : "opacity-100"}`}
+          className={`absolute h-0.5 w-6 rounded bg-white transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`}
         />
 
         <span
-          className={`absolute h-0.5 w-6 rounded bg-black transition-all duration-300 dark:bg-white ${isOpen ? "-rotate-45" : "translate-y-2"}`}
+          className={`absolute h-0.5 w-6 rounded bg-white transition-all duration-300 ${isOpen ? "-rotate-45" : "translate-y-2"}`}
         />
       </button>
     </div>

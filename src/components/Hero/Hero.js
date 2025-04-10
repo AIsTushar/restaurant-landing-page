@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="flex flex-col px-7 pt-8 lg:flex-row lg:px-56 lg:pt-26 lg:pb-30">
+    <div className="flex flex-col px-7 pt-8 pb-8 lg:flex-row lg:px-56 lg:pt-26 lg:pb-30">
       <div className="z-10 flex flex-col justify-center gap-4">
         <div className="lg:w-2xl lg:bg-[linear-gradient(90deg,_rgba(189,_31,_23,_0)_32.88%,_rgba(189,_31,_23,_0.7)_100%)]">
           <h2 className="text-3xl font-bold tracking-[0%] text-white uppercase lg:text-6xl lg:leading-[90px]">
@@ -31,7 +31,7 @@ function Hero() {
           alt="Ofter"
           width={120}
           height={120}
-          className="absolute right-2 bottom-2 h-28 w-28 lg:-right-14 lg:-bottom-0"
+          className="absolute right-2 bottom-2 z-20 h-28 w-28 lg:-right-14 lg:-bottom-0"
         />
       </div>
     </div>
