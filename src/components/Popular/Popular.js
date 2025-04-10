@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Card from "./Card";
 import Swiper from "./Swiper";
 
 function Popular() {
   return (
-    <div className="bg-[#FBF7F2] px-56 py-28">
+    <div className="relative bg-[#FBF7F2] px-56 py-28">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-2">
@@ -18,7 +19,7 @@ function Popular() {
         <Swiper />
       </div>
       {/* Cards */}
-      <div>
+      <div className="mt-16 grid grid-cols-4 gap-8">
         <Card
           image="/burger.png"
           title="vegetables burger"
@@ -39,10 +40,15 @@ function Popular() {
           title="Cuisine Chicken"
           subtitle="Japanese Cuisine Chicken"
         />
-        <Card
-          image="/burger.png"
-          title="vegetables burger"
-          subtitle="Barbecue Italian cuisine pizza"
+      </div>
+
+      <div>
+        <Image
+          src="/side-2.png"
+          alt="Offer"
+          width={500}
+          height={500}
+          className="absolute bottom-36 left-0 h-66 w-46"
         />
       </div>
     </div>

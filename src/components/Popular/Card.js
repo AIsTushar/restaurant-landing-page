@@ -2,15 +2,15 @@ import Image from "next/image";
 
 function Card({ image, title, subtitle }) {
   return (
-    <div className="mx-auto max-w-xs overflow-hidden rounded-lg bg-white shadow-lg">
+    <div className="mx-auto max-w-xs overflow-hidden rounded-md bg-white px-4 py-4">
       {/* Image Section */}
-      <div className="flex h-48 w-full items-center justify-center bg-gray-200">
+      <div className="flex h-28 w-full items-center justify-center">
         <Image
           src={image}
           alt="Burger"
           width={200}
           height={200}
-          className="h-full w-full object-cover"
+          className="h-28 w-28 object-contain"
         />
       </div>
 

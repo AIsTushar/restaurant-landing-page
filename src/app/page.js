@@ -1,8 +1,10 @@
 import About from "@/components/About/About";
+import BookNow from "@/components/BookNow/BookNow";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Popular from "@/components/Popular/Popular";
-import Image from "next/image";
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -13,8 +15,9 @@ export default function Home() {
       </div>
       <About />
       <Popular />
-
-      <div className="min-h-screen"></div>
+      <BookNow />
+      <Testimonials />
+      <Footer />
     </main>
   );
 }
